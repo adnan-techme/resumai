@@ -134,7 +134,7 @@ def call_gemini_with_retry(client, prompt, max_retries=3):
     """Wrapper to handle 429 Rate Limits automatically."""
     for i in range(max_retries):
         try:
-            return client.models.generate_content(model='gemini-flash-latest', contents=prompt)
+            return client.models.generate_content(model='gemini-3.5-flash-lite', contents=prompt)
         except Exception as e:
             if "429" in str(e) and i < max_retries - 1:
                 st.toast(f"Rate limit hit. Waiting 20 seconds to retry... (Attempt {i+1}/{max_retries})")
