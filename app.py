@@ -97,12 +97,15 @@ hr {
 st.markdown('<h1 class="main-title">ATS Resume Tailor 🕸️</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Instantly tailor your resume and cover letter with the power of Gemini.</p>', unsafe_allow_html=True)
 
-# Cross-platform Tectonic executable detection
-def get_tectonic_cmd():
+# Cross-platform LaTeX executable detection
+def get_latex_cmd():
+    import shutil
     local_win_tectonic = os.path.join(".", "tectonic", "tectonic.exe")
     if os.path.exists(local_win_tectonic):
-        return local_win_tectonic
-    return "tectonic"
+        return [local_win_tectonic]
+    if shutil.which("tectonic"):
+        return ["tectonic"]
+    return ["pdflatex", "-interaction=nonstopmode"]
 
 # Secure API Key Resolution
 def get_api_key():
@@ -238,7 +241,8 @@ if resume_clicked or cover_letter_clicked:
                         if os.path.exists("tailored_resume.pdf"):
                             os.remove("tailored_resume.pdf")
                             
-                        subprocess.run([get_tectonic_cmd(), "tailored_resume.tex"], check=True, capture_output=True)
+                        cmd = get_latex_cmd() + ["tailored_resume.tex"]
+                        subprocess.run(cmd, check=True, capture_output=True)
                         
                         with open("tailored_resume.pdf", "rb") as pdf_file:
                             reader = pypdf.PdfReader(pdf_file)
