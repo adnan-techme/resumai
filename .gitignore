@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output PDF and TeX files generated per run
+*.pdf
+tailored_resume.tex
+cover_letter.tex
+
+# Binary dependencies & large archives
+tectonic/
+tectonic.zip
+
+# Streamlit secrets & local config
+.streamlit/secrets.toml
+
+# Environment variables
+.env
+.venv/
+env/
+venv/
