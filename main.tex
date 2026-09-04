@@ -80,70 +80,95 @@
 \newcolumntype{C}{>{\centering\arraybackslash}c}
 \newcolumntype{R}{>{\hb@xt@\z@\bgroup\hss}r<{\egroup}}
 \makeatother
+\usepackage{tabularx}
+\usepackage{array}
 
 \begin{document}
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Adnan Ahmed}} \\[3pt]
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{L@{\extracolsep{\fill}}C@{\extracolsep{\fill}}R}
-  \href{mailto:adnan.techme@gmail.com}{adnan.techme@gmail.com} &
-  \multirow{2}{*}{\Huge \textbf{Adnan Ahmed}} &
-  \href{https://www.linkedin.com/in/adnan-techme/}{linkedin.com/in/adnan-techme} \\
-  +61 424 808 695 && Melbourne, VIC
-\end{tabular*}
+    \small
+    \href{mailto:adnan.techme@gmail.com}{adnan.techme@gmail.com}
+    \ $|$ \
+    +61 424 808 695
+    \ $|$ \
+    Melbourne, VIC
+    \\[2pt]
 
-%------------------------------------------------
-%------------------------------------------------
+    \footnotesize
+    \href{https://linkedin.com/in/adnan-techme}
+    {linkedin.com/in/adnan-techme}
+    \ $|$ \
+    \href{https://github.com/adnan-techme}
+    {github.com/adnan-techme}
+    \ $|$ \
+    Full Work Rights (Subclass 485)
+\end{center}
+
+\vspace{-6pt}
+
+%----------TECHNICAL SKILLS----------
 \section{Technical Skills}
-  \resumeSubHeadingListStart
-   \item\small{
-     \textbf{Systems \& Support}: Technical Support, Windows, Apple (iOS/iPads), Microsoft 365 (Teams, Outlook, OneDrive), Device Setup \vspace{2pt} \\
-     \textbf{Troubleshooting \& Network}: Hardware Diagnostics, Software Troubleshooting, Printers/Scanners, Wi-Fi, Basic Networking \vspace{2pt} \\
-     \textbf{Operations \& Management}: User Onboarding/Offboarding, Entra ID (Azure AD), Asset Management, Vendor Relations, Technical Documentation
-   }
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+
+\item{\footnotesize
+\textbf{Systems \& Support:}
+Windows 10/11, Microsoft 365 (Outlook, Teams, OneDrive), Device Setup,
+User Administration, Hardware \& Software Troubleshooting
+\\[1pt]
+
+\textbf{Networking \& Identity:}
+TCP/IP, DNS, DHCP, Wi-Fi, VPN, Entra ID (Azure AD), Active Directory
+\\[1pt]
+
+\textbf{Development \& Tools:}
+JavaScript, Python, PHP, HTML/CSS, React, Node.js, Flask, REST APIs,
+Git, GitHub, Visual Studio Code, Microsoft Excel
+}
+
+\resumeSubHeadingListEnd
 %------------------------------------------------
 
 %-----------EXPERIENCE-----------------
 \section{Professional Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Technical Writer \& Technology Analyst}{Remote/U.S.}
-      {SlashGear \& Engadget}{Dec 2023 -- Present}
+      {Technology Journalist}{Remote/U.S.}
+      {Static Media -- Engadget \& SlashGear}{Dec 2023 -- Present}
       \resumeItemListStart
-        \resumeItemNH{Authored engaging articles and reviews on consumer technology, focusing on Android, iOS, smart devices, and automotive tech.}
-        \resumeItemNH{Translated complex product specifications and features into clear, accessible language for a broad consumer audience.}
-        \resumeItemNH{Utilized CMS platforms and editorial workflows to publish timely tech news and hardware reviews for millions of readers.}
+        \resumeItemNH{Research, test and troubleshoot consumer hardware and software, reproducing technical issues and translating findings into clear guides for non-technical readers.}
+        \resumeItemNH{Manage multiple concurrent assignments through CMS-based workflows while collaborating remotely with editors and meeting strict publication deadlines.}
+        \resumeItemNH{Interpret technical specifications, product documentation and software behaviour to explain complex technology clearly and accurately.}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {Frontend Developer}{Melbourne, VIC}
-      {Quitch (Capstone Project)}{Feb 2025 -- July 2025}
-      \resumeItemListStart
-        \resumeItemNH{Engineered custom system components using PHP and JavaScript to resolve legacy infrastructure bottlenecks.}
-        \resumeItemNH{Analyzed and optimized the critical rendering path, improving performance scores from 37 to 93 via data-driven troubleshooting.}
-        \resumeItemNH{Collaborated with stakeholders to define functional requirements and ensure cross-system compatibility.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Junior Business Analyst}{Remote/Brisbane, QLD}
-      {Impact Care Services (SAIEP Program)}{Mar 2025 -- Jun 2025}
-      \resumeItemListStart
-        \resumeItemNH{Identified and formulated business requirements for digital transformations by analyzing existing processes and data procedures.}
-        \resumeItemNH{Utilized advanced Microsoft Excel functions to structure complex datasets and generate reports for executive decision-making.}
-        \resumeItemNH{Managed stakeholder engagement and project communication to ensure timely delivery of system enhancements.}
-      \resumeItemListEnd
+      
+      \resumeSubheading
+  {Technology Writer}{Remote/Canada}
+  {Valnet -- MakeUseOf \& Android Police}{Mar 2022 -- Feb 2025}
+  \resumeItemListStart
+    \resumeItemNH{Researched, tested, and wrote technical guides, features, and troubleshooting content primarily covering Android, Windows, consumer software, and connected devices.}
+    \resumeItemNH{Reproduced software issues and tested operating system features, applications, and device workflows to provide accurate step-by-step solutions for readers.}
+    \resumeItemNH{Translated technical documentation and complex software concepts into accessible content while working within fast-paced editorial workflows and publication deadlines.}
+  \resumeItemListEnd
   \resumeSubHeadingListEnd
 
   %-----------PROJECTS (MOVED UP)-----------------
-\section{Projects}
-  \resumeSubHeadingListStartBullets
-    \resumeSubItem{\href{https://flingit.app}{FlingIt (Live App: flingit.app)}}
-      {Architected a serverless P2P platform using WebRTC and Node.js. Engineered custom TCP/IP signaling handshakes to manage real-time data transfer, ensuring high system availability without cloud reliance.}
-    \resumeSubItem{MalWhere}
-      {Developed a full-stack malware detection system using React.js and Flask. Implemented backend behavioral analysis and utilized data reporting tools to demonstrate proficiency in root cause analysis and monitoring.}
-    \resumeSubItem{SwinChat}
-      {Architected a RAG-based AI chatbot to optimize FAQ retrieval. Integrated REST APIs and search logic to interface between data layers and users, translating business requirements into functional tech solutions.}
-  \resumeSubHeadingListEnd
+\section{Technical \& Industry Projects}
+  \resumeSubHeadingListStart
+
+\resumeSubItem{Quitch -- Frontend Development Industry Capstone}
+{Worked with Quitch on a university industry capstone to improve its existing web platform using PHP and JavaScript. Diagnosed frontend performance bottlenecks and optimized the critical rendering path, improving performance scores from 37 to 93. Collaborated with stakeholders to understand requirements and implement compatible improvements.}
+
+\resumeSubItem{FlingIt (Live App: \href{https://flingit.app/}{flingit.app})}
+{Built and deployed a browser-based peer-to-peer file-sharing application using WebRTC and Node.js, with a lightweight signalling layer to establish peer connections and transfer files directly between clients.}
+
+\resumeSubItem{MalWhere}
+{Designed and developed an end-to-end malware classification web application using React, Flask, HTML, and CSS. Integrated a CNN-LSTM machine learning model trained on the UNSW-NB15 dataset, and implemented CSV file scanning, role-based user access, scan history, and malware classification reporting.}
+
+\resumeSubItem{SwinChat}
+{Built a RAG-based AI chatbot for FAQ retrieval, integrating REST APIs and search logic to connect application interfaces with underlying data sources.}
+
+\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -153,7 +178,7 @@
       {Swinburne University of Technology, GPA: 3.7/4.0}{July 2023 -- July 2025}
     \resumeSubheading
       {Bachelor of Engineering (Industrial \& Production)}{Hyderabad, India}
-      {Osmania University, GPA: 8.}{July 2018 -- July 2022}
+      {Osmania University, GPA: 8.0/10.0}{July 2018 -- July 2022}
   \resumeSubHeadingListEnd
 
 %-----------AWARDS-----------------
